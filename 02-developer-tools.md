@@ -17,5 +17,8 @@ sudo apt update
 sudo apt install -y sublime-text
 ```
 
+# C++
 - Clion
-
+```
+sudo apt install -y cmake
+```
