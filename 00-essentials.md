@@ -3,6 +3,10 @@
 sudo apt install -y fish tmux git vim
 chsh -s `which fish`
 ```
+Install `git` clone `dotfiles` from repo.
+```
+ln -sfv ~/workspace/dotfiles/fish ~/.config/fish
+```
 
 # Map Caps Lock to Control Key
 ```
@@ -22,4 +26,12 @@ wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-ke
 echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
 sudo apt update 
 sudo apt install -y google-chrome-stable
+```
+
+# Slack
+https://slack.com/downloads/instructions/ubuntu
+
+# Resource Monitor
+```
+sudo apt install -y indicator-multiload
 ```
