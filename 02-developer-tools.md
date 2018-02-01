@@ -22,3 +22,10 @@ sudo apt install -y sublime-text
 ```
 sudo apt install -y cmake
 ```
+
+# Python
+```
+sudo apt-get -y install python3-pip
+pip3 install --upgrade pip
+pip3 install virtualenv
+```
