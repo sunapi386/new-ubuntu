@@ -35,5 +35,5 @@ sudo apt install -y libboost-all-dev
 
 ### Curl
 ```
-sudo apt-get install libpcap0.8-dev
+sudo apt-get install -y libpcap0.8-dev
 ```

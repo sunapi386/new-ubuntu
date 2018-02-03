@@ -1,6 +1,6 @@
 # Home sweet home tools
 ``` 
-sudo apt install -y fish tmux git vim
+sudo apt install -y fish tmux git vim vlc ffmpeg
 chsh -s `which fish`
 ```
 Install `git` clone `dotfiles` from repo.
@@ -34,4 +34,13 @@ https://slack.com/downloads/instructions/ubuntu
 # Resource Monitor
 ```
 sudo apt install -y indicator-multiload
+```
+
+# RealVNCVNC Connect (server)
+
+```
+wget -q -O https://www.realvnc.com/download/file/vnc.files/VNC-Server-6.2.1-Linux-x64-ANY.tar.gz
+sudo dpkg -i VNC-Server-6.2.1-Linux-x64-ANY.tar.gz
+systemctl enable vncserver-x11-serviced.service
+systemctl start vncserver-x11-serviced.service
 ```
