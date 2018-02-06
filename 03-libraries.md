@@ -1,39 +1,43 @@
-# OpenCV
+## C++
+
+### SWIG
 ```
-wget -qO - https://raw.githubusercontent.com/milq/milq/master/scripts/bash/install-opencv.sh | bash
+sudo apt install swig
 ```
 
-# Nvidia CUDA Toolkit 9.1
-```
-wget -q -o - http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/cuda-repo-ubuntu1604_9.1.85-1_amd64.deb
-sudo dpkg -i cuda-repo-ubuntu1604_9.1.85-1_amd64.deb
-sudo apt-key adv --fetch-keys http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/7fa2af80.pub
-sudo apt-get update
-sudo apt-get install -y cuda
-```
-
-# SWIG
-```
-sudo apt install -y swig
-```
-
-# C++ 
 ### Yaml
 ```
-sudo apt install -y libyaml-cpp-dev
+sudo apt install libyaml-cpp-dev
 ```
 
 ### GFlags GLog
 ```
-sudo apt install -y libgflags-dev libgoogle-glog-dev
+sudo apt install libgflags-dev libgoogle-glog-dev
 ```
 
 ### Boost
 ```
-sudo apt install -y libboost-all-dev
+sudo apt install libboost-all-dev
 ```
 
 ### Curl
 ```
-sudo apt-get install -y libpcap0.8-dev
+sudo apt-get install libpcap0.8-dev
+```
+
+### SDL
+```
+sudo apt-get install libsdl2-dev libsdl2-gfx-dev libsdl2-image-dev libsdl2-ttf-dev
+```
+
+### Pangolin
+```
+sudo apt-get install libglew-dev
+git clone https://github.com/stevenlovegrove/Pangolin.git
+cd Pangolin
+mkdir build
+cd build
+cmake -DBUILD_TESTS=false -DBUILD_EXAMPLES=false ..
+make -j
+sudo make install
 ```

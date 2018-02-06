@@ -1,6 +1,6 @@
 # Home sweet home tools
-``` 
-sudo apt install -y fish tmux git vim vlc ffmpeg
+```
+sudo apt install -y fish tmux git vim vlc ffmpeg tree psensor
 chsh -s `which fish`
 ```
 Install `git` clone `dotfiles` from repo.
@@ -24,7 +24,7 @@ Change color to black text on white background.
 ```
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
-sudo apt update 
+sudo apt update
 sudo apt install -y google-chrome-stable
 ```
 
