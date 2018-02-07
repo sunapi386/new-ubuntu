@@ -1,6 +1,7 @@
 # Home sweet home tools
 ```
-sudo apt install -y fish tmux git vim tree nmap ddclient
+sudo apt install -y fish tmux git vim tree nmap 
+sudo apt install ddclient
 sudo apt install ffmpeg
 chsh -s `which fish`
 # if GUI
