@@ -1,6 +1,6 @@
 # Home sweet home tools
 ```
-sudo apt install -y fish tmux git vim ffmpeg tree
+sudo apt install -y fish tmux git vim ffmpeg tree nmap
 chsh -s `which fish`
 # if GUI
 sudo apt install -y vlc psensor
