@@ -1,6 +1,7 @@
 # Home sweet home tools
 ```
-sudo apt install -y fish tmux git vim ffmpeg tree nmap
+sudo apt install -y fish tmux git vim tree nmap ddclient
+sudo apt install ffmpeg
 chsh -s `which fish`
 # if GUI
 sudo apt install -y vlc psensor
@@ -46,3 +47,20 @@ sudo dpkg -i VNC-Server-6.2.1-Linux-x64-ANY.tar.gz
 systemctl enable vncserver-x11-serviced.service
 systemctl start vncserver-x11-serviced.service
 ```
+
+# ddclient
+```
+# as root
+cat << EOF >> /etc/ddclient.conf
+daemon=5m
+use=web, web=dynamicdns.park-your-domain.com/getip
+ssl=yes
+
+protocol=namecheap
+server=dynamicdns.park-your-domain.com
+login=sunapi386.ca
+# Set Dynamic DNS Password
+password=''
+# Set desired subdomain
+subdomain
+EOF
