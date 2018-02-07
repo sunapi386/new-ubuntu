@@ -1,7 +1,9 @@
 # Home sweet home tools
 ```
-sudo apt install -y fish tmux git vim vlc ffmpeg tree psensor
+sudo apt install -y fish tmux git vim ffmpeg tree
 chsh -s `which fish`
+# if GUI
+sudo apt install -y vlc psensor
 ```
 Install `git` clone `dotfiles` from repo.
 ```
