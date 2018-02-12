@@ -3,13 +3,21 @@
 sudo apt install -y fish tmux git vim tree nmap 
 sudo apt install ddclient
 sudo apt install ffmpeg
-chsh -s `which fish`
+```
+```
+chsh -s `which fish`  
+sudo vim /etc/passwd # change user's line to /usr/bin/fish (make sure valid)
 # if GUI
 sudo apt install -y vlc psensor
 ```
 Install `git` clone `dotfiles` from repo.
 ```
 ln -sfv ~/workspace/dotfiles/fish ~/.config/fish
+```
+
+## Hostname
+```
+sudo vim /etc/hosts /etc/hostname
 ```
 
 # Map Caps Lock to Control Key
