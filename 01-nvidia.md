@@ -6,6 +6,22 @@ sudo apt update
 # sudo apt install nvidia-390 # as of Jan 31 2018
 sudo apt install nvidia-430 # as of Jun 13 2019
 ```
+
+# If LightDM doesn't play nicely
+nvidia-430 isn't supported in lightdm at the moment. You may want to go back and install again. 
+```
+sudo vim /etc/default/grub # to change "quiet splash" to "quiet nosplash"
+sudo update-grub
+reboot
+(Press ESC) 
+Select ubuntu recovery mode, enable networking, then root terminal.
+sudo add-apt-repository ppa:graphics-drivers (if you haven't already)
+sudo apt purge nvidia* (if you tried installing already)
+sudo apt install nvidia-418 (nvidia-430 doesn't work with lightdm yet)
+You may need to sudo systemctl stop lightdm
+nvidia-smi (check your version is correct)
+```
+
 # Reboot, check for success
 ```
 lsmod | grep nvidia
