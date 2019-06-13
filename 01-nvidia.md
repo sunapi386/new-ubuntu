@@ -3,7 +3,8 @@
 sudo apt purge "nvidia*"
 sudo add-apt-repository ppa:graphics-drivers
 sudo apt update
-sudo apt install nvidia-390 # as of Jan 31 
+# sudo apt install nvidia-390 # as of Jan 31 2018
+sudo apt install nvidia-430 # as of Jun 13 2019
 ```
 # Reboot, check for success
 ```
