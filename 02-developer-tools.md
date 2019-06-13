@@ -18,7 +18,7 @@ sudo apt install sublime-text
 ```
 
 # C++
-- Clion
+- [Clion](https://www.jetbrains.com/clion/download/)
 ```
 sudo apt install cmake
 ```
