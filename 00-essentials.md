@@ -1,8 +1,9 @@
 # Home sweet home tools
 ```
-sudo apt install -y fish tmux git vim tree nmap 
+sudo apt install -y fish tmux git vim tree nmap ffmpeg 
 sudo apt install ddclient
-sudo apt install ffmpeg
+ssh-keygen
+cat ~/.ssh/id_rsa.pub
 ```
 ```
 chsh -s `which fish`  
