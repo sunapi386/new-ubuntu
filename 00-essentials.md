@@ -1,15 +1,28 @@
 # Home sweet home tools
 ```
 sudo apt install -y fish tmux git vim tree nmap ffmpeg 
-sudo apt install ddclient
 ssh-keygen
 cat ~/.ssh/id_rsa.pub
 ```
+Fish shell
 ```
 chsh -s `which fish`  
 sudo vim /etc/passwd # change user's line to /usr/bin/fish (make sure valid)
-# if GUI
-sudo apt install -y vlc psensor
+```
+
+# For code editing
+```
+mkdir -p workspace
+cd ~/workspace
+git clone https://gitlab.com/sunapi386/dotfiles.git 
+bash setup.sh
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+vim +PluginInstall +qall
+```
+
+# For GUI machine
+```
+sudo apt install -y vlc psensor indicator-multiload
 ```
 Install `git` clone `dotfiles` from repo.
 ```
@@ -44,10 +57,7 @@ sudo apt install -y google-chrome-stable
 # Slack
 https://slack.com/downloads/instructions/ubuntu
 
-# Resource Monitor
-```
-sudo apt install -y indicator-multiload
-```
+
 
 # RealVNCVNC Connect (server)
 
@@ -58,8 +68,10 @@ systemctl enable vncserver-x11-serviced.service
 systemctl start vncserver-x11-serviced.service
 ```
 
-# ddclient
+# ddclient (optional)
+If you want to setup this machine as a server.
 ```
+sudo apt install ddclient
 # as root
 cat << EOF >> /etc/ddclient.conf
 daemon=5m
