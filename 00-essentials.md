@@ -10,6 +10,18 @@ chsh -s `which fish`
 sudo vim /etc/passwd # change user's line to /usr/bin/fish (make sure valid)
 ```
 
+# Remove password prompt for `sudo`
+Warning, if you do this, don't leave your machine logged in when you're AFK!
+
+1. Run command: `sudo visudo`
+2. Go down to the bottom of the file, add the following line: `<user> ALL=(ALL) NOPASSWD: ALL` Note: replace <user> with your username
+3. Save and exit the file. You're done!
+  
+To test, run command:  
+1. Run command: `sudo -k` This will clear the exiting password cache
+2. `sudo ls` You should not be prompted for a password
+
+
 # For code editing
 ```
 mkdir -p workspace
