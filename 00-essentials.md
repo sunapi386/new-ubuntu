@@ -6,9 +6,11 @@ cat ~/.ssh/id_rsa.pub
 ```
 Fish shell
 ```
-sudo apt-add-repository ppa:fish-shell/release-2 # default one is old
-sudo apt-get update
-sudo apt-get install fish
+# sudo apt-add-repository ppa:fish-shell/release-2 # default one is old 
+# sudo apt-add-repository --remove ppa:fish-shell/release-2
+sudo apt-add-repository ppa:fish-shell/release-3
+sudo apt update
+sudo apt install fish
 chsh -s `which fish`  
 sudo vim /etc/passwd # change user's line to /usr/bin/fish (make sure valid)
 ```
