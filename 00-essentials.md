@@ -1,11 +1,14 @@
 # Home sweet home tools
 ```
-sudo apt install -y fish tmux git vim tree nmap ffmpeg 
+sudo apt install -y tmux git vim tree nmap ffmpeg 
 ssh-keygen
 cat ~/.ssh/id_rsa.pub
 ```
 Fish shell
 ```
+sudo apt-add-repository ppa:fish-shell/release-2 # default one is old
+sudo apt-get update
+sudo apt-get install fish
 chsh -s `which fish`  
 sudo vim /etc/passwd # change user's line to /usr/bin/fish (make sure valid)
 ```
