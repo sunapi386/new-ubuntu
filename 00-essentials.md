@@ -57,6 +57,12 @@ sudo apt install -y gnome-tweak-tool
 ```
 Tweak Tool -> Typing -> Caps Lock key behavior -> Additional Ctrl key
 
+This only works in Gnome, not Xmonad. With xmonad, use Xmodmap. Setup available in the config
+
+```
+bash ~/workspace/dotfiles/setup.sh
+```
+
 # Terminals
 ```
 sudo apt install -y terminator
