@@ -18,10 +18,27 @@ sudo apt install sublime-text
 ```
 
 # C++
-- [Clion](https://www.jetbrains.com/clion/download/)
+
+## [Clion](https://www.jetbrains.com/clion/download/)
+### External tools
+
+| program | arguments | working directory |
+|---------|----------------------------------------------------|-------------------|
+| astyle | --options=astylerc $FilePathRelativeToProjectRoot$ | $ProjectFileDir$ |
+|  |  |  |
+
+## CMake
 ```
 sudo apt install cmake
 ```
+
+
+## Formatter
+```
+sudo apt install astyle
+astyle --options=astylerc src/main.cpp
+```
+
 
 # Python
 ```
