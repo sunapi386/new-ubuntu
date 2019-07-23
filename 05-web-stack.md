@@ -3,9 +3,11 @@
 ## nvm
 
 ```
-git clone https://github.com/Alex7Kom/nvm-fish.git ~/.nvm-fish
-# To activate nvm, you need to source it from your shell:
-source ~/.nvm-fish/nvm.fish
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+
+function nvm
+   bass source ~/.nvm/nvm.sh --no-use ';' nvm $argv
+end
 ```
 
 source ~/.nvm-fish/nvm.fish
