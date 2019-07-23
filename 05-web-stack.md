@@ -1,9 +1,17 @@
 # Web stack
 
+## gron
+https://github.com/tomnomnom/gron
+```
+https://github.com/tomnomnom/gron/releases/download/v0.6.0/gron-linux-amd64-0.6.0.tgz
+tar xzf gron-linux-amd64-0.6.0.tgz
+sudo mv gron /usr/local/bin/
+```
+
 ## nvm
 
 ```
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+wget https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
 
 function nvm
    bass source ~/.nvm/nvm.sh --no-use ';' nvm $argv
