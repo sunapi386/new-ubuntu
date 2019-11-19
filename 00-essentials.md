@@ -95,6 +95,7 @@ systemctl start vncserver-x11-serviced.service
 If you want to setup this machine as a server.
 ```
 sudo apt install ddclient
+sudo su
 # as root
 cat << EOF >> /etc/ddclient.conf
 daemon=5m
@@ -103,9 +104,17 @@ ssl=yes
 
 protocol=namecheap
 server=dynamicdns.park-your-domain.com
-login=sunapi386.ca
-# Set Dynamic DNS Password
+# Set Domain Name, e.g. sunpi.co
+login=sunpi.co
+# Set Dynamic DNS Password, blank here ''
 password=''
-# Set desired subdomain
+# Set desired subdomain, e.g. subdomain.sunpi.co
 subdomain
 EOF
+```
+
+Checking if the config works
+`sudo /usr/sbin/ddclient -daemon=0 -debug -verbose -noquiet`
+You should see 
+`SUCCESS:  updating subdomain: good: IP address set to 1.2.3.4`
+
