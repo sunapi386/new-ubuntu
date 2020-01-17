@@ -118,3 +118,9 @@ Checking if the config works
 You should see 
 `SUCCESS:  updating subdomain: good: IP address set to 1.2.3.4`
 
+# EXFAT Filesystem Support
+
+```
+sudo apt update
+sudo apt install exfat-fuse exfat-utils
+```
