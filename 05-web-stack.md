@@ -13,18 +13,46 @@ sudo apt-get update
 sudo apt-get install golang-go
 ```
 
+On macOS 
+```brew install https://raw.githubusercontent.com/EricChiang/pup/master/pup.rb```
+
 Then
 
 ```go get github.com/ericchiang/pup```
 
 
 ## gron
+
 https://github.com/tomnomnom/gron
+
+gron transforms JSON into discrete assignments to make it easier to grep for what you want and see the absolute 'path' to it. It eases the exploration of APIs that return large blobs of JSON but have terrible documentation.
+
+```gron "https://api.github.com/repos/tomnomnom/gron/commits?per_page=1" | fgrep "commit.author"
+json[0].commit.author = {};
+json[0].commit.author.date = "2016-07-02T10:51:21Z";
+json[0].commit.author.email = "mail@tomnomnom.com";
+json[0].commit.author.name = "Tom Hudson";
+gron can work backwards too, enabling you to turn your filtered data back into JSON:
+```
+```gron "https://api.github.com/repos/tomnomnom/gron/commits?per_page=1" | fgrep "commit.author" | gron --ungron
+[
+  {
+    "commit": {
+      "author": {
+        "date": "2016-07-02T10:51:21Z",
+        "email": "mail@tomnomnom.com",
+        "name": "Tom Hudson"
+      }
+    }
+  }
+]
+```
 ```
 https://github.com/tomnomnom/gron/releases/download/v0.6.0/gron-linux-amd64-0.6.0.tgz
 tar xzf gron-linux-amd64-0.6.0.tgz
 sudo mv gron /usr/local/bin/
 ```
+
 
 ## nvm
 
