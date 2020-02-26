@@ -21,6 +21,15 @@ Then
 ```go get github.com/ericchiang/pup```
 
 
+## jq
+jq is like sed for JSON data - you can use it to slice and filter and map and transform structured data with the same ease that sed, awk, grep and friends let you play with text.
+
+https://stedolan.github.io/jq/
+```
+sudo apt-get update
+sudo apt-get install jq
+```
+
 ## gron
 
 https://github.com/tomnomnom/gron
