@@ -64,7 +64,11 @@ function nvm
 end
 ```
 
-source ~/.nvm-fish/nvm.fish
+`source ~/.nvm-fish/nvm.fish`
+
+Using the latest node
+
+`nvm install --lts --latest-npm`
 
 ## nginx
 
