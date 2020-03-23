@@ -16,3 +16,13 @@ W: Target CNF (main/cnf/Commands-all) is configured multiple times in /etc/apt/s
 
 Look at https://github.com/davidfoerster/aptsources-cleanup
 
+# VPN
+
+https://launchpad.net/~dwmw2/+archive/ubuntu/openconnect
+
+```
+sudo add-apt-repository ppa:dwmw2/openconnect # optional but gets a more updated ver.
+sudo apt-get update
+sudo apt-get install network-manager-openconnect
+```
+
