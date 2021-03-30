@@ -57,3 +57,10 @@ sudo apt-get install python3-pip
 pip3 install --upgrade pip
 pip3 install virtualenv
 ```
+
+# Ruby Version Manager (RVM)
+```
+curl -sSL https://get.rvm.io | bash -s stable --ruby
+command curl -sSL https://rvm.io/pkuczynski.asc | gpg2 --import -
+curl -sSL https://get.rvm.io | bash -s stable --ruby
+```
