@@ -46,14 +46,18 @@ sudo make install
 # Install Ruby 2.3.7 - (https://gorails.com/setup/ubuntu/20.04)
 
 ```
-sudo apt update && sudo apt upgrade
-sudo apt install zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev software-properties-common libffi-dev
+sudo apt install -y autoconf bison build-essential libcurl4-openssl-dev libdb-dev libffi-dev libgdbm-dev libgdbm6 libncurses5-dev libreadline-dev libreadline6-dev libsqlite3-dev libssl-dev libxml2-dev libxslt1-dev libyaml-dev software-properties-common sqlite3 zlib1g-dev
 
-cd
 git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+
+# bash
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
 echo 'eval "$(rbenv init -)"' >> ~/.bashrc
 exec $SHELL
+
+# fish
+
+
 git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
 echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
 exec $SHELL

@@ -59,6 +59,7 @@ pip3 install virtualenv
 ```
 
 # Ruby Version Manager (RVM)
+Go use RBENV instead. See 03-libraries.md
 ```
 curl -sSL https://get.rvm.io | bash -s stable --ruby
 command curl -sSL https://rvm.io/pkuczynski.asc | gpg2 --import -
