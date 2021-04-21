@@ -12,7 +12,7 @@ curl -sSL 'http://keyserver.ubuntu.com/pks/lookup?op=get&search=0xC1CF6E31E6BADE
 
 # install
 sudo apt-get update
-sudo apt-get install -y ros-kinetic-desktop-full
+sudo apt-get install -y ros-melodic-desktop-full
 
 # env (fish shell)
 bass source /opt/ros/melodic/setup.bash
