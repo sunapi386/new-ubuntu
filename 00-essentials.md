@@ -31,7 +31,8 @@ To test, run command:
 ```
 mkdir -p workspace
 cd ~/workspace
-git clone https://gitlab.com/sunapi386/dotfiles.git 
+git clone git@gitlab.com:sunapi386/dotfiles.git
+cd dotfiles
 bash setup.sh
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
@@ -55,7 +56,7 @@ sudo vim /etc/hosts /etc/hostname
 ```
 sudo apt install -y gnome-tweak-tool
 ```
-Tweak Tool -> Typing -> Caps Lock key behavior -> Additional Ctrl key
+Tweaks -> Typing -> Caps Lock key behavior -> Additional Ctrl key
 
 This only works in Gnome, not Xmonad. With xmonad, use Xmodmap. Setup available in the config
 
@@ -78,7 +79,7 @@ sudo apt install -y google-chrome-stable
 ```
 
 # Slack
-https://slack.com/downloads/instructions/ubuntu
+https://slack.com/downloads
 
 
 
