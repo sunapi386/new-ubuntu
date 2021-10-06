@@ -1,6 +1,7 @@
 # Home sweet home tools
 ```
-sudo apt install -y tmux git vim tree nmap ffmpeg 
+sudo apt update
+sudo apt install -y tmux git vim tree nmap ffmpeg curl
 ssh-keygen
 cat ~/.ssh/id_rsa.pub
 ```
