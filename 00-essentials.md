@@ -15,6 +15,7 @@ sudo apt install fish
 chsh -s `which fish`  
 sudo vim /etc/passwd # change user's line to /usr/bin/fish (make sure valid)
 ```
+On Raspberry Pi OS, make and install. https://gist.github.com/AFRUITPIE/1d26d3d15dc43f821a36d7ccc1260a7f
 
 # Remove password prompt for `sudo`
 Warning, if you do this, don't leave your machine logged in when you're AFK!
