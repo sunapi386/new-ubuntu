@@ -786,11 +786,19 @@ rm $CNODE_HOME/crontab-fragment.txt
 ### On relaynode1
 echo
 #!/usr/bin/env fish
-set BLOCKPRODUCING_IP relay1.example.com
+set BLOCKPRODUCING_IP 10.0.1.224 # internal non-public address
 set BLOCKPRODUCING_PORT 6000
 set CNODE_CONFIG mainnet
+set GENESIS_JSON "$CNODE_HOME/$NODE_CONFIG-shelley-genesis.json"
+set NWMAGIC (jq -r .networkMagic $GENESIS_JSON)
+
 cp $CNODE_HOME/$CNODE_CONFIG-topology.json $CNODE_HOME/$CNODE_CONFIG-topology.json.bak
-echo curl -s "https://api.clio.one/htopology/v1/fetch/?max=20&customPeers=$BLOCKPRODUCING_IP:$BLOCKPRODUCING_PORT:1|relays-new.cardano-mainnet.iohk.io:3001:2"
-curl -s  "https://api.clio.one/htopology/v1/fetch/?max=20&customPeers=$BLOCKPRODUCING_IP:$BLOCKPRODUCING_PORT:1|relays-new.cardano-mainnet.iohk.io:3001:2"  | jq .
-# curl -s -o $CNODE_HOME/$CNODE_CONFIG-topology.json "https://api.clio.one/htopology/v1/fetch/?max=20&customPeers=$BLOCKPRODUCING_IP:$BLOCKPRODUCING_PORT:1|relays-new.cardano-mainnet.iohk.io:3001:2"
+
+# use ipv4 (-4) not ipv6
+echo curl -4 -s "https://api.clio.one/htopology/v1/fetch/?max=20&magic=$NWMAGIC&customPeers=$BLOCKPRODUCING_IP:$BLOCKPRODUCING_PORT:1|relays-new.cardano-mainnet.iohk.io:3001:2"
+set json (curl -4 -s "https://api.clio.one/htopology/v1/fetch/?max=20&magic=1097911063&customPeers=$BLOCKPRODUCING_IP:$BLOCKPRODUCING_PORT:1|relays-new.cardano-mainnet.iohk.io:3001:2"  | jq .)
+echo $json
+echo $json > $CNODE_HOME/$CNODE_CONFIG-topology.json
 ' >  $CNODE_HOME/relay-topology_pull.sh
+
+
