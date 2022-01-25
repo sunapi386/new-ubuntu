@@ -127,3 +127,13 @@ You should see
 sudo apt update
 sudo apt install exfat-fuse exfat-utils
 ```
+
+# Nethogs
+```
+cd  ~/workspace
+git clone https://github.com/raboof/nethogs
+cd nethogs
+make
+sudo make install
+sudo nethogs
+```
