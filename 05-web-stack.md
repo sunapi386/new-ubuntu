@@ -66,7 +66,7 @@ sudo mv gron /usr/local/bin/
 ## nvm
 
 ```
-wget https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash 
 
 function nvm
    bass source ~/.nvm/nvm.sh --no-use ';' nvm $argv
