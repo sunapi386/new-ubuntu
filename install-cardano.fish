@@ -15,9 +15,12 @@ sudo su - cardano
 sudo apt-get update -y
 sudo apt-get install automake build-essential pkg-config libffi-dev libgmp-dev libssl-dev libtinfo-dev libsystemd-dev zlib1g-dev make g++ tmux git jq wget libncursesw5 libtool autoconf -y
 
-# on raspi
+# Current Cardano Node Version Requirements
 
-
+Release Date | Aug 11, 2022
+Cardano Node Version | 1.35.3
+GHC Version | 8.10.7
+Cabal Version | 3.6.2.0
 
 
 # install haskell
@@ -26,10 +29,10 @@ curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
 # should work now
 source ~/.config/fish/config.fish
 ghcup --version
-ghcup install ghc 8.10.4
-ghcup set ghc 8.10.4
-ghcup install cabal 3.4.0.0
-ghcup set cabal 3.4.0.0
+ghcup install ghc 8.10.7
+ghcup set ghc 8.10.7
+ghcup install cabal 3.6.2.0
+ghcup set cabal 3.6.2.0
 
 # should show the expected version
 ghc --version
