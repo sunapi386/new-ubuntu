@@ -28,5 +28,5 @@ sudo apt-get install network-manager-openconnect
 
 and to use
 ```
-sudo openconnect --authgroup orca-Ubuntu --csd-wrapper ~/bin/csd_wrapper orca.amazon.com --user sunjason
+sudo openconnect vpn.example.com --user <username>
 ```
