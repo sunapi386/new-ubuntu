@@ -4,7 +4,7 @@
 # 0 pre-reqs
 
 sudo adduser cardano
-# 1CoinMaster
+
 sudo usermod -aG sudo cardano
 sudo visudo
 # cardano  ALL=(ALL) NOPASSWD:ALL
