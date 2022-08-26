@@ -1,7 +1,7 @@
 # Home sweet home tools
 ```
 sudo apt update
-sudo apt install -y tmux git vim tree nmap ffmpeg curl landscape-common
+sudo apt install -y tmux git vim tree nmap ffmpeg curl landscape-common htop nginx
 ssh-keygen
 cat ~/.ssh/id_rsa.pub
 ```
