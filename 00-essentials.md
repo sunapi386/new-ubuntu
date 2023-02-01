@@ -1,7 +1,8 @@
 # Home sweet home tools
 ```
 sudo apt update
-sudo apt install -y tmux git vim tree nmap ffmpeg curl landscape-common htop nginx
+<<<<<<< HEAD
+sudo apt install -y tmux git vim tree nmap ffmpeg curl landscape-common htop nginx tmux screen wireguard wireguard-tools
 ssh-keygen
 cat ~/.ssh/id_rsa.pub
 ```
@@ -39,6 +40,7 @@ bash setup.sh
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
 ```
+
 
 # For GUI machine
 ```
