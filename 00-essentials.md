@@ -1,8 +1,7 @@
 # Home sweet home tools
 ```
 sudo apt update
-<<<<<<< HEAD
-sudo apt install -y tmux git vim tree nmap ffmpeg curl landscape-common htop nginx tmux screen wireguard wireguard-tools
+sudo apt install -y tmux git vim tree nmap ffmpeg curl landscape-common htop nginx tmux screen wireguard wireguard-tools resolvconf
 ssh-keygen
 cat ~/.ssh/id_rsa.pub
 ```
