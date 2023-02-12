@@ -89,10 +89,10 @@ https://slack.com/downloads
 # RealVNCVNC Connect (server)
 
 ```
-wget -q -O https://www.realvnc.com/download/file/vnc.files/VNC-Server-6.2.1-Linux-x64-ANY.tar.gz
-sudo dpkg -i VNC-Server-6.2.1-Linux-x64-ANY.tar.gz
-systemctl enable vncserver-x11-serviced.service
-systemctl start vncserver-x11-serviced.service
+wget https://downloads.realvnc.com/download/file/vnc.files/VNC-Server-7.0.0-Linux-x64.deb
+sudo dpkg -i VNC-Server-7.0.0-Linux-x64.deb
+sudo systemctl enable vncserver-x11-serviced.service
+sudo systemctl start vncserver-x11-serviced.service
 ```
 
 # ddclient (optional)
