@@ -15,3 +15,12 @@ sudo mount -t hfsplus -o force,rw /dev/sda2 /media/sda2
 sudo apt update
 sudo apt install -y exfat-fuse exfat-utils
 ```
+## XFS
+```bash
+sudo apt install xfsprogs
+sudo modprobe -v xfs
+mkfs.xfs /dev/sda2 -f
+# fstab
+# /dev/sda2   	/mnt/data	xfs   	defaults    	0   	0
+
+```
