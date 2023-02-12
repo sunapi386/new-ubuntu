@@ -73,68 +73,23 @@ sudo apt install -y terminator
 ```
 Change color to black text on white background.
 
-# Chrome
-```
-wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
-sudo apt update
-sudo apt install -y google-chrome-stable
-```
+## Disable the lid from triggering system sleep
+If using a laptop for a server, closing the lid on the laptop normally suspends OS. To prevent this:
 
-# Slack
-https://slack.com/downloads
+`sudo vi /etc/systemd/logind.conf`
 
-
-
-# RealVNCVNC Connect (server)
+Then modify the
 
 ```
-wget https://downloads.realvnc.com/download/file/vnc.files/VNC-Server-7.0.0-Linux-x64.deb
-sudo dpkg -i VNC-Server-7.0.0-Linux-x64.deb
-sudo systemctl enable vncserver-x11-serviced.service
-sudo systemctl start vncserver-x11-serviced.service
+HandleLidSwitch=ignore
+HandleLidSwitchDocked=ignore
 ```
 
-# ddclient (optional)
-If you want to setup this machine as a server.
-```
-sudo apt install ddclient
-sudo su
-# as root
-cat << EOF >> /etc/ddclient.conf
-daemon=5m
-use=web, web=dynamicdns.park-your-domain.com/getip
-ssl=yes
+And then `sudo systemctl restart systemd-logind`
 
-protocol=namecheap
-server=dynamicdns.park-your-domain.com
-# Set Domain Name, e.g. sunpi.co
-login=sunpi.co
-# Set Dynamic DNS Password, blank here ''
-password=''
-# Set desired subdomain, e.g. subdomain.sunpi.co
-subdomain
-EOF
-```
-
-Checking if the config works
-`sudo /usr/sbin/ddclient -daemon=0 -debug -verbose -noquiet`
-You should see 
-`SUCCESS:  updating subdomain: good: IP address set to 1.2.3.4`
-
-# EXFAT Filesystem Support
-
-```
-sudo apt update
-sudo apt install exfat-fuse exfat-utils
-```
-
-# Nethogs
-```
-cd  ~/workspace
-git clone https://github.com/raboof/nethogs
-cd nethogs
-make
-sudo make install
-sudo nethogs
+# XMonad
+```bash
+sudo apt-get install xmonad suckless-tools xscreensaver
+sudo apt-get install xmobar
+~/.xmobarrc
 ```
