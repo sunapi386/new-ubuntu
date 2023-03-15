@@ -1,7 +1,7 @@
 # Setting up server
 
 ```
-sudo apt install -y certbot chrony httrack jq mailutils mysql-client parallel python3-certbot-nginx postgresql rsync software-properties-common unattended-upgrades unzip wcstools yarn zip
+sudo apt install -y certbot chrony httrack jq mailutils mysql-client parallel python3-certbot-nginx postgresql rsync software-properties-common unattended-upgrades unzip wcstools zip
 ```
 
 # Move the folders

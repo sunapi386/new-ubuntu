@@ -79,6 +79,9 @@ Using the latest node
 
 `nvm install --lts --latest-npm`
 
+## yarn
+`npm install --global yarn`
+
 ## nginx
 
 ```
