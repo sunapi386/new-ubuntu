@@ -66,6 +66,12 @@ sudo mv gron /usr/local/bin/
 ## nvm
 
 ```
+curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
+fisher install jorgebucaran/nvm.fish
+```
+
+Alternatively without the fisher plugin
+```
 curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash 
 
 function nvm
